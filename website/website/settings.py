@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'website.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'nome_do_banco',
+        'NAME': 'website',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',
