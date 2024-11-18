@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Categoria, Fornecedor, Produto, Cliente, Pedido
+from django.http import HttpResponse
 
-# Exemplo de view CRUD para Produtos
+def index(request):
+    return HttpResponse("<h1>Bem-vindo ao site!</h1><p>Use o menu para navegar.</p>")
 def listar_produtos(request):
     produtos = Produto.objects.all()
     return render(request, 'core/listar_produtos.html', {'produtos': produtos})

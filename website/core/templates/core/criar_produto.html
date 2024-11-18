@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar produto</title>
+</head>
+<body>
+    <h1>Adicionar Produto</h1>
+<form method="POST">
+    {% csrf_token %}
+    Nome: <input type="text" name="nome"><br>
+    Descrição: <textarea name="descricao"></textarea><br>
+    Preço: <input type="text" name="preco"><br>
+    Estoque: <input type="number" name="estoque"><br>
+    Categoria: 
+    <select name="categoria">
+        {% for categoria in categorias %}
+            <option value="{{ categoria.id }}">{{ categoria.nome }}</option>
+        {% endfor %}
+    </select><br>
+    Fornecedor: 
+    <select name="fornecedor">
+        {% for fornecedor in fornecedores %}
+            <option value="{{ fornecedor.id }}">{{ fornecedor.nome }}</option>
+        {% endfor %}
+    </select><br>
+    <button type="submit">Salvar</button>
+</form>
+
+</body>
+</html>
