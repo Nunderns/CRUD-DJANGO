@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Sistema de Gestão</h1>
+    <p>Escolha uma das opções abaixo para navegar:</p>
+    <ul>
+        <li><a href="{% url 'listar_produtos' %}">Gerenciar Produtos</a></li>
+        <li><a href="{% url 'listar_categorias' %}">Gerenciar Categorias</a></li>
+        <li><a href="{% url 'listar_fornecedores' %}">Gerenciar Fornecedores</a></li>
+        <li><a href="{% url 'listar_clientes' %}">Gerenciar Clientes</a></li>
+        <li><a href="{% url 'listar_pedidos' %}">Gerenciar Pedidos</a></li>
+    </ul>
+</body>
+</html>

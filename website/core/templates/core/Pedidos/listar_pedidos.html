@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pedidos</title>
+</head>
+<body>
+    <h1>Lista de Pedidos</h1>
+    <a href="{% url 'criar_pedido' %}">Adicionar Pedido</a>
+    <ul>
+        {% for pedido in pedidos %}
+            <li>
+                Pedido #{{ pedido.id }} - Cliente: {{ pedido.cliente.nome }} - Produto: {{ pedido.produto.nome }}
+                - Quantidade: {{ pedido.quantidade }} - Data: {{ pedido.data|date:"d/m/Y H:i" }}
+                <a href="{% url 'editar_pedido' pedido.id %}">Editar</a>
+                <a href="{% url 'deletar_pedido' pedido.id %}">Excluir</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
