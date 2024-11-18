@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Categoria</title>
+</head>
+<body>
+    <h1>Editar Categoria</h1>
+    <form method="post">
+        {%scrf_token%}
+        <label for="nome">Nome da Categoria</label>
+        <input type="text" id="nome" name="nome" value="{{categoria.nome}}" required><br>
+        <button type="submit">Salvar Alterações</button>
+    </form>
+    <a href="{%url 'listar_categorias'%}">Voltar para lista de categorias</a>
+</body>
+</html>

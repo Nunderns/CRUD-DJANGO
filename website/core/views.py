@@ -52,7 +52,7 @@ def deletar_produto(request, id):
 # Categorias
 def listar_categorias(request):
     categorias = Categoria.objects.all()
-    return render(request, 'core/listar_categorias.html', {'categorias': categorias})
+    return render(request, 'core/Categorias/listar_categorias.html', {'categorias': categorias})
 
 
 def criar_categoria(request):
@@ -60,7 +60,7 @@ def criar_categoria(request):
         nome = request.POST['nome']
         Categoria.objects.create(nome=nome)
         return redirect('listar_categorias')
-    return render(request, 'core/criar_categoria.html')
+    return render(request, 'core/Categorias/criar_categoria.html')
 
 
 def editar_categoria(request, id):
@@ -69,7 +69,7 @@ def editar_categoria(request, id):
         categoria.nome = request.POST['nome']
         categoria.save()
         return redirect('listar_categorias')
-    return render(request, 'core/editar_categoria.html', {'categoria': categoria})
+    return render(request, 'core/Categorias/editar_categoria.html', {'categoria': categoria})
 
 
 def deletar_categoria(request, id):
