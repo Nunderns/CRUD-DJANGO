@@ -31,7 +31,7 @@ Este é um projeto de gerenciamento básico de entidades (CRUD) desenvolvido com
 
 - **Python 3.9+**
 - **Django 5.1+**
-- **Banco de dados**: MySQl (padrão) ou outro configurável.
+- **Banco de dados**: MySQl
 - **Navegador moderno** para interface web.
 
 ---
