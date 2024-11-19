@@ -115,14 +115,4 @@ Os formulários incluem validações no frontend (JavaScript) e no backend (Djan
 - Validação de formatos como email e números.
 - Prevenção de erros no envio de dados.
 
----
 
-## **Contribuições**
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
-
----
-
-## **Licença**
-
-Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
