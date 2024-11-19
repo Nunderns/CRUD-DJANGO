@@ -8,6 +8,7 @@
     <title>Adicionar Pedido</title>
 </head>
 <body>
+    <a href="{% url 'listar_pedidos' %}">Voltar para lista de Pedidos</a>
     <h1>Adicionar Pedido</h1>
     <form method="post">
         {% csrf_token %}

@@ -9,8 +9,9 @@
     <title>Criar Produto</title>
 </head>
 <body>
+    <a href="{% url 'listar_produtos' %}">Voltar para lista de Produtos</a>
     <h1>Adicionar Produto</h1>
-    <form method="POST">
+    <form method="POST" data-type="produto">
         {% csrf_token %}
         Nome: <input type="text" name="nome"><br>
         Descrição: <textarea name="descricao"></textarea><br>
