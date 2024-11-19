@@ -75,29 +75,6 @@ python manage.py runserver
 
 Acesse o projeto em: [http://localhost:8000](http://localhost:8000)
 
----
-
-## **Estrutura do Projeto**
-
-```plaintext
-project_root/
-├── core/
-│   ├── migrations/    # Arquivos de migração do banco de dados
-│   ├── models.py      # Modelos das entidades
-│   ├── views.py       # Lógica das views
-│   ├── templates/     # Templates HTML organizados por entidade
-│   │   ├── Produtos/
-│   │   ├── Categorias/
-│   │   ├── Clientes/
-│   │   ├── Fornecedores/
-│   │   └── Pedidos/
-├── static/            # Arquivos estáticos (CSS, JS, imagens)
-├── manage.py          # Comando principal do Django
-└── db.sqlite3         # Banco de dados SQLite (padrão)
-```
-
----
-
 ## **Principais URLs**
 
 - `/produtos/` - Lista de produtos
