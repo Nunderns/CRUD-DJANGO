@@ -1,12 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <title>Fornecedores</title>
 </head>
 <body>
     <h1>Lista de Fornecedores</h1>
+    <a href="{% url 'index' %}">Voltar para a Tela Inicial</a><br>
+    <!-- Botão para criar um fornecedor -->
+    <a href="{% url 'criar_fornecedor' %}">
+        <button>Criar Fornecedor</button>
+    </a>
+
     <ul>
         {% for fornecedor in fornecedores %}
             <li>{{ fornecedor.nome }} - {{ fornecedor.telefone }} - {{ fornecedor.email }}</li>

@@ -81,7 +81,7 @@ def deletar_categoria(request, id):
 # Fornecedores
 def listar_fornecedores(request):
     fornecedores = Fornecedor.objects.all()
-    return render(request, 'core/listar_fornecedores.html', {'fornecedores': fornecedores})
+    return render(request, 'core/Fornecedor/listar_fornecedores.html', {'fornecedores': fornecedores})
 
 
 def criar_fornecedor(request):
@@ -91,7 +91,7 @@ def criar_fornecedor(request):
         email = request.POST['email']
         Fornecedor.objects.create(nome=nome, telefone=telefone, email=email)
         return redirect('listar_fornecedores')
-    return render(request, 'core/criar_fornecedor.html')
+    return render(request, 'core/Fornecedor/criar_fornecedor.html')
 
 
 def editar_fornecedor(request, id):
@@ -102,7 +102,7 @@ def editar_fornecedor(request, id):
         fornecedor.email = request.POST['email']
         fornecedor.save()
         return redirect('listar_fornecedores')
-    return render(request, 'core/editar_fornecedor.html', {'fornecedor': fornecedor})
+    return render(request, 'core/Fornecedor/editar_fornecedor.html', {'fornecedor': fornecedor})
 
 
 def deletar_fornecedor(request, id):

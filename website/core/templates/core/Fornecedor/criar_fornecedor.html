@@ -1,11 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <title>Criar Fornecedor</title>
 </head>
 <body>
+    <a href="{% url 'listar_fornecedores' %}">Voltar para lista de Fornecedores</a>
     <h1>Criar Fornecedor</h1>
     <form method="post">
         {% csrf_token %}
